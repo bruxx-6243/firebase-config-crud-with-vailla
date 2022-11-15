@@ -1,0 +1,17 @@
+{
+  "name": "firebase-config",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "firebase": "^9.14.0",
+    "nodemon": "^2.0.20"
+  }
+}
