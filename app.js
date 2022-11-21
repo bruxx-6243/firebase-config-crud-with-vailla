@@ -44,7 +44,7 @@ const createUser = () => {
     })
     .catch((err) => console.log(err.message));
 };
-createUser(); //Here we set the authentication of the user with email and password
+// createUser(); //Here we set the authentication of the user with email and password
 
 // Function to save our user to the database
 const saveUser = async () => {
