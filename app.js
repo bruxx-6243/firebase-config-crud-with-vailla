@@ -34,8 +34,7 @@ const userData = {
 };
 
 // Function to authenticate our user
-const createUser = () => {
-  const { email, password } = userData;
+const createUser = ({email, password}) => {
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
@@ -44,11 +43,10 @@ const createUser = () => {
     })
     .catch((err) => console.log(err.message));
 };
-// createUser(); //Here we set the authentication of the user with email and password
+createUser({...userData}); //Here we set the authentication of the user with email and password
 
 // Function to save our user to the database
-const saveUser = async () => {
-  const { company, name, email } = userData;
+const saveUser = async ({company, name, email }) => {
   const userRef = collection(db, "users");
 
   try {
@@ -62,7 +60,7 @@ const saveUser = async () => {
     console.log(`Error adding document: ${err.message}`);
   }
 };
-saveUser();
+saveUser({...userData});
 
 // Function to read data from our database
 const readDoc = async () => {
